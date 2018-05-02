@@ -1,6 +1,18 @@
-<div class="card mx-auto">
+<div class="card">
   <div class="card-body">
     <h3 class="card-title"><%= @party.title %></h3>
-    <p class="card-text"><%= @party.description %></p>
+
+    <p class="card-text">
+      Planned at
+      <span class="text-info"><%= @party.at.strftime('%m/%d/%Y %H:%M') %></span>
+    </p>
+
+    <h2 class="text-center counter">
+      <%= time_diff(@party.at) %>
+    </h2>
+
+    <% @party.description.split("\n").each do |line| %>
+      <p class="card-text"><%= line %></p>
+    <% end %>
   </div>
 </div>

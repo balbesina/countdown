@@ -9,7 +9,7 @@ Party.create! [
   {
     at: '2018-05-19 09:00:00',
     title: 'BelTech spring party',
-    description: "All right! Our drinking party plan is turning 2! So this is happening, and you're invited!\n"\
+    description: "All right! Our drinking party plan is turning 2!\nSo this is happening, and you're invited!\n"\
                  'We can\'t throw this party without you!'
   }
 ]

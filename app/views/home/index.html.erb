@@ -2,10 +2,8 @@
   <%= stylesheet_pack_tag 'home' %>
 <% end %>
 
-<div class="row h-100 align-items-center">
-  <div class="col home-root">
-    <% if @party %>
-      <%= render(partial: 'next_party') %>
-    <% end %>
+<div class="d-flex h-100 justify-content-center align-items-center">
+  <div class="home-root">
+    <%= render(partial: @party ? 'next_party' : 'no_party') %>
   </div>
 </div>
