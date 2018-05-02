@@ -1,0 +1,11 @@
+<% content_for(:header) do %>
+  <%= stylesheet_pack_tag 'home' %>
+<% end %>
+
+<div class="row h-100 align-items-center">
+  <div class="col home-root">
+    <% if @party %>
+      <%= render(partial: 'next_party') %>
+    <% end %>
+  </div>
+</div>

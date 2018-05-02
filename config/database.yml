@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: 1
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: countdown_dev
+
+test:
+  <<: *default
+  database: countdown_test
+
+production:
+  <<: *default
+  database: countdown_prod
+  username: countdown
+  password: <%= ENV["COUNTDOWN_DATABASE_PASSWORD"] %>
