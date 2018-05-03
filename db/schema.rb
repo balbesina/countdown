@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2018_05_02_065508) do
     t.text "description", limit: 16777215
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["at"], name: "index_parties_on_at"
   end
 
 end

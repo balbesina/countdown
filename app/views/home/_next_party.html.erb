@@ -7,12 +7,14 @@
       <span class="text-info"><%= @party.at.strftime('%m/%d/%Y %H:%M') %></span>
     </p>
 
-    <h2 class="text-center counter">
+    <h2 class="text-center counter" data-at="<%= @party.at.iso8601 %>">
       <%= time_diff(@party.at) %>
     </h2>
 
-    <% @party.description.split("\n").each do |line| %>
-      <p class="card-text"><%= line %></p>
+    <% if @party.description %>
+      <% @party.description.split("\n").each do |line| %>
+        <p class="card-text"><%= line %></p>
+      <% end %>
     <% end %>
   </div>
 </div>

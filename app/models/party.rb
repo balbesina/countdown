@@ -5,7 +5,7 @@ class Party < ApplicationRecord
 
   class << self
     def next
-      find_by('at > ?', Time.now)
+      order(:at).find_by('at > ?', Time.now)
     end
   end
 end
