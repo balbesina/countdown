@@ -1,5 +1,10 @@
 .home-root {
   .card {
     max-width: 30rem;
+
+    img {
+      max-height: 20rem;
+      width: auto;
+    }
   }
 }
