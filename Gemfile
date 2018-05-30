@@ -8,6 +8,7 @@ ruby '2.5.1'
 gem 'rails', '~> 5.2.0'
 
 gem 'aws-sdk-s3', require: false
+gem 'bcrypt'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jbuilder', '~> 2.5'
 gem 'mysql2', '~> 0.5.1'
